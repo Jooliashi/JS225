@@ -30,4 +30,4 @@ However, initializing with objects or values other than those from Todo type wil
 
 #### Jest
 I used jest for testing. I would like to point out the use of `toStrictEqual` and `toBe` methods to test objects. `toStrictEqual` tests for same type, same properties and values. It will return `true` for original object and cloned object. `toBe` is testing if the two objects are the same object, so it will return `false` for original object and cloned object.  
-
+use `npm run test` for test suites.  

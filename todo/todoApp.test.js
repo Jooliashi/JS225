@@ -1,6 +1,7 @@
 const Todo = require('./todoApp').Todo
 const TodoList = require('./todoApp').TodoList
 const TodoManager = require('./todoApp').TodoManager
+
 test('create todo object with full todo data', () => {
   let newObj = new Todo({
     title: 'Buy Milk',
@@ -191,6 +192,13 @@ describe('testing todoList object and todoManager object', () => {
   test('update todo with invalid updates', () => {
     let list = new TodoList(todoData1, todoData2);
     expect(list.update(todoData1.id, {id: '111'})).toBeFalsy;
+  })
+
+  test('get todo with id, copy only', () => {
+    let list = new TodoList(...todoSet);
+    let todo = list.getTodo(todoData1.id);
+    expect(todo).toStrictEqual(todoData1);
+    expect(todo).not.toBe(todoData1);
   })
 
   test('create todoManager object', () => {
