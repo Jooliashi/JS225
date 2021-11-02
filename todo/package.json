@@ -1,0 +1,16 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "todoApp.js",
+  "dependencies": {
+    "jest": "^27.3.1",
+    "lodash": "^4.17.21",
+    "uuid": "^8.3.2"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}

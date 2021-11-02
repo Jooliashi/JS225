@@ -1,18 +1,14 @@
-function Animal() {
-  this.type = "mammal";
+
+function greeting(person, greet) {
+  console.log(`${greet}, ${person}`)
 }
 
-Animal.prototype.breathe = function() {
-  console.log("I'm breathing");
+function generateGreeting(greet) {
+  return function(person) {
+    return greeting(person, greet)
+  }
 }
 
-function Dog() {}
-function Terrier() {}
+let sayHello = generateGreeting('Hello')
 
-var mammal = new Animal();
-
-Dog.prototype = new Animal();
-
-var dog = new Dog();
-
-console.log(Object.prototype); // f Object() { [native code] }
+sayHello('Julia')
